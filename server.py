@@ -2,10 +2,10 @@
     analysis to be executed over the Flask channel and deployed on
     localhost:5000.
 '''
-# Import Flask, render_template, request from the flask pramework package : TODO
-# Import the sentiment_analyzer function from the package created: TODO
+from flask import Flask, render_template, request
+from SentimentAnalysis.sentiment_analysis import sentiment sent_analyzer
 
-#Initiate the flask app : TODO
+app= Flask("Sentiment Analyzer")
 
 @app.route("/sentimentAnalyzer")
 def sent_analyzer():
@@ -14,6 +14,7 @@ def sent_analyzer():
         function. The output returned shows the label and its confidence 
         score for the provided text.
     '''
+    sent = request.from("textToAnalyze")
     # TODO
 
 @app.route("/")
